@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Carrito - La Reina</title>
+    <link rel="stylesheet" href="../CSS/estilosCarrito.css">
+</head>
+<body>
+    <header>
+        <nav class="header-nav">
+            <a href="index.html">Sobre Nosotros</a>
+            <a href="productos.html">Productos</a>
+        </nav>
+        <a href="index.html">
+            <img src="../IMG/logo.png" alt="Logo La Reina" class="logo">
+        </a>
+        <nav class="header-nav">
+            <a href="#footer-contact">Contacto</a>
+            <a href="carrito.html" class="cart-icon">
+                <img src="../IMG/carro.svg" alt="Carrito de compra" width="40" height="40">
+            </a>
+        </nav>
+    </header>
+    <main>
+        <div class="products-container">
+            <h1>Carrito</h1>
+            <div class="products-grid">
+                <div class="product-card box-shadow hover-effect">
+                    <img src="../IMG/honey-4919403_1280 (1).png" alt="Miel de Romero" class="product-image">
+                    <div class="product-info">
+                        <h2>Miel de Romero</h2>
+                        <p>Miel pura de romero de Sierra de Gata</p>
+                        <p class="price">12,50 €</p>
+                        <div class=".quantity-delete-container">
+                            <label class="quantity" for="quantity">Cantidad:
+                                <select name="quantity" id="quantity">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </label>
+                            <img class="delete-icon" src="../IMG/delete_24dp_737373_FILL0_wght400_GRAD0_opsz24.svg" alt="borrar producto">
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card box-shadow hover-effect">
+                    <img src="../IMG/honey-4919403_1280 (1).png" alt="Miel de Encina" class="product-image">
+                    <div class="product-info">
+                        <h2>Miel de Encina</h2>
+                        <p>Miel pura de encina de Sierra de Gata</p>
+                        <p class="price">14,00 €</p>
+                        <div class=".quantity-delete-container">
+                            <label class="quantity" for="quantity">Cantidad:
+                                <select name="quantity" id="quantity">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </label>
+                            <img class="delete-icon" src="../IMG/delete_24dp_737373_FILL0_wght400_GRAD0_opsz24.svg" alt="borrar producto">
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card box-shadow hover-effect">
+                    <img src="../IMG/honey-4919403_1280 (1).png" alt="Polen" class="product-image">
+                    <div class="product-info">
+                        <h2>Polen</h2>
+                        <p>Polen fresco de flores silvestres</p>
+                        <p class="price">8,50 €</p>
+                        <div class=".quantity-delete-container">
+                            <label class="quantity" for="quantity">Cantidad:
+                                <select name="quantity" id="quantity">
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </label>
+                            <img class="delete-icon" src="../IMG/delete_24dp_737373_FILL0_wght400_GRAD0_opsz24.svg" alt="borrar producto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <p class="total-price">Precio Total: 35,00 €</p>
+        <hr>
+        <div class="checkout-container">
+            <h3>Formulario de Compra</h3>
+            
+            <form class="checkout-form">
+                <label for="name">Nombre:</label>
+                <input type="text" name="name" id="name" placeholder="Nombre" maxlength="40" required oninput="limitarCaracteres(this, 40)">
+    
+                <label for="surname">Apellidos:</label>
+                <input type="text" name="surname" id="surname" maxlength="60" required placeholder="Apellidos" oninput="limitarCaracteres(this, 60)">
+    
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required placeholder="Email">
+    
+                <label for="phone">Teléfono:</label>
+                <input type="tel" name="phone"  id="phone" required pattern="\d{3} \d{2} \d{2} \d{2}" placeholder="formato xxx xx xx xx">
+
+    
+                <label for="address">Dirección:</label>
+                <input type="text" id="address" name="address" required placeholder="Lima, S/N (no poner calle o avenida)">
+    
+                <h4>Información de Pago</h4>
+
+                <label for="card-holder">Titular de la Tarjeta:</label>
+                <input type="text" name="titular" id="titular" required placeholder="Nombre Apellido Apellido">
+
+
+                <label for="card-number">Número de Tarjeta:</label>
+                <input type="text" name="card-number" id="card-number" required  inputmode="numeric" oninput="this.value=this.value.replace(/\D/g,'')" maxlength="16" minlength="16" pattern="\d{16}"  placeholder="0000000000000000">
+    
+            <label for="month">Mes de caducidad:</label>
+            <label for="year">Año de caducidad: </label>
+
+            <br>
+            <br>
+            <select name="month" id="month" required>
+                <option value="seleccione" selected>---Seleccione---</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <select name="year" id="year" required>
+                <option value="seleccione" selected>---Seleccione---</option>
+                <option value="">2024</option>
+                <option value="">2025</option>
+                <option value="">2026</option>
+                <option value="">2027</option>
+                <option value="">2028</option>
+            </select>
+            <br>
+            <label for="cvv">CVV: </label>
+            <br>
+            <br>
+            <input type="password" name="cvv" id="cvv" required inputmode="numeric" oninput="this.value=this.value.replace(/\D/g,'')" maxlength="3"  max="999" min="000"  placeholder="000" pattern="\d{3}">
+    
+                <label class="legal-check">
+                    <input type="checkbox" id="legal" name="legal" required>
+                    Acepto los términos legales
+                </label>
+
+                <label class="save-data">
+                    <input type="checkbox" id="save" name="save" required>
+                    Guardar mis datos para futuras compras
+                </label>
+    
+                <button type="submit" class="submit-button">Realizar Compra</button>
+                <button type="reset" class="reset-button">Cancelar</button>
+            </form>
+        </div>
+        <div class="shipping-info">
+            <h3>Destinos y Precios de Envío</h3>
+            <table class="shipping-table">
+                <thead>
+                    <tr>
+                        <th>Destino</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>España Península</td>
+                        <td rowspan="2">5,00 €</td> 
+                    </tr>
+                    <tr>
+                        <td>España islas</td>
+                    </tr>
+                    <tr>
+                        <td>Portugal</td>
+                        <td>7,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Francia</td>
+                        <td>10,00 €</td>
+                    </tr>
+                    <tr>
+                        <td>Alemania</td>
+                        <td>12,00 €</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-section">
+            <div class="footer-contact" id="footer-contact">
+                <div>
+                    <h3>Contacto</h3>
+                    <p>Teléfono: 927 123 456</p>
+                    <p>Horario: L-V 9:00-14:00 / 16:00-19:00</p>
+                </div>
+                <img src="../IMG/logo.png" class="footerLogo" alt="Logo La Reina" width="190" height="110">
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="footer-links">
+                <div class="footer-links-column">
+                    <a href="avisoLegal.html">Aviso legal</a>
+                    <a href="">Cookies</a>
+                    <a href="">Política de privacidad</a>
+                    <a href="">Términos y condiciones</a>
+                </div>
+                <div class="footer-links-column">
+                    <a href="formularioDeAcceso.html">Mi cuenta</a>
+                    <a href="">Pedidos</a>
+                    <a href="">Direcciones</a>
+                    <a href="">Preguntas Frecuentes</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="social-links">
+                <a href="https://twitter.com/lareinamiel" target="_blank" class="social-icon">
+                    <img src="../IMG/twitteri.svg" class="x" alt="Twitter" width="40" height="40">
+                </a>
+                <a href="https://www.instagram.com/mielvaldexalima/"target="_blank" class="social-icon">
+                    <img src="../IMG/instagrami.svg" class="instagram" alt="Instagram" width="40" height="40">
+                </a>
+                <a href="https://www.youtube.com/watch?v=Tj_ZaqVGL7Y" target="_blank" class="social-icon">
+                    <img src="../IMG/youtubei.svg" class="youtube" alt="Facebook" width="40" height="40">
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" class="social-icon">
+                    <img src="../IMG/inkedini.svg" class="linkedin" alt="Facebook" width="40" height="40">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

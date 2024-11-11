@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - La Reina</title>
+    <link rel="stylesheet" href="../CSS/estilosFormulario.css">
+</head>
+<body>
+    <header>
+        <nav class="header-nav">
+            <a href="index.html">Sobre Nosotros</a>
+            <a href="productos.html">Productos</a>
+        </nav>
+        <a href="index.html">
+            <img src="../IMG/logo.png" alt="Logo La Reina" class="logo">
+        </a>
+        <nav class="header-nav">
+            <a href="#footer-contact">Contacto</a>
+            <a href="carrito.html" class="cart-icon">
+                <img src="../IMG/carro.svg" alt="Carrito de compra" width="40" height="40">
+            </a>
+        </nav>
+    </header>
+    <main>
+        <div class="form-container">
+            <h1>Registro de Usuario</h1>
+            <form class="registration-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre *</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Nombre" maxlength="40"  oninput="limitarCaracteres(this, 40)">
+                </div>
+
+                <div class="form-group">
+                    <label for="apellidos">Apellidos *</label>
+                    <input type="text" id="apellidos" name="apellidos"  maxlength="60" required placeholder="Apellidos" oninput="limitarCaracteres(this, 60)">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="Email">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Contraseña *</label>
+                    <input type="password" id="password" name="password" required placeholder="Contraseña">
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirmar Contraseña *</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required placeholder="Contraseña">
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" id="direccion" name="direccion" required placeholder="Lima, S/N (no poner calle o avenida)">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" required pattern="\d{3} \d{2} \d{2} \d{2}" placeholder="formato xxx xx xx xx">
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos">Acepto los términos y condiciones *</label>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Deseo recibir información sobre productos y ofertas</label>
+                </div>
+
+                <button type="submit" class="submit-button">Registrarse</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-section">
+            <div class="footer-contact" id="footer-contact">
+                <div>
+                    <h3>Contacto</h3>
+                    <p>Teléfono: 927 123 456</p>
+                    <p>Horario: L-V 9:00-14:00 / 16:00-19:00</p>
+                </div>
+                <img src="../IMG/logo.png" class="footerLogo" alt="Logo La Reina" width="190" height="110">
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="footer-links">
+                <div class="footer-links-column">
+                    <a href="avisoLegal.html">Aviso legal</a>
+                    <a href="">Cookies</a>
+                    <a href="">Política de privacidad</a>
+                    <a href="">Términos y condiciones</a>
+                </div>
+                <div class="footer-links-column">
+                    <a href="formularioDeAcceso.html">Mi cuenta</a>
+                    <a href="">Pedidos</a>
+                    <a href="">Direcciones</a>
+                    <a href="">Preguntas Frecuentes</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section">
+            <div class="social-links">
+                <a href="https://twitter.com/lareinamiel" target="_blank" class="social-icon">
+                    <img src="../IMG/twitteri.svg" class="x" alt="Twitter" width="40" height="40">
+                </a>
+                <a href="https://www.instagram.com/mielvaldexalima/"target="_blank" class="social-icon">
+                    <img src="../IMG/instagrami.svg" class="instagram" alt="Instagram" width="40" height="40">
+                </a>
+                <a href="https://www.youtube.com/watch?v=Tj_ZaqVGL7Y" target="_blank" class="social-icon">
+                    <img src="../IMG/youtubei.svg" class="youtube" alt="Facebook" width="40" height="40">
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" class="social-icon">
+                    <img src="../IMG/inkedini.svg" class="linkedin" alt="Facebook" width="40" height="40">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,303 @@
+
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sura:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #F29F05;
+    --color-secondary: #0D0D0D;
+    --color-white: #FFFFFF;
+    --color-light-grey: #F2F2F2;
+    --color-yellow-secondary: #F28705;
+    --color-grey: #737373;
+}
+
+body {
+    font-family: 'Sura', serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-secondary);
+    background-color: var(--color-white);
+}
+
+/* Encabezado */
+header {
+    background-color: var(--color-white);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    height: 1%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.header-nav a {
+    font-family: 'League Gothic', sans-serif;
+    font-size: 24px;
+    text-decoration: none;
+    color: var(--color-secondary);
+    transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+    color: var(--color-primary);
+}
+
+.logo {
+    max-width: 190px;
+    height: auto;
+}
+
+/* Carrito icono */
+.cart-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.cart-icon:hover{
+    transform: scale(1.1);
+    filter: brightness(1.1);
+    content: url('../IMG/shopping_cart_24dp_F29F05_FILL0_wght400_GRAD0_opsz24\ \(1\).svg');
+}
+
+/*MAIN*/
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    font-family: 'League Gothic', sans-serif;
+    color: #333;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ol {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+ol li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+dl {
+    margin-left: 20px;
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+
+p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/*FOOTER*/
+footer {
+    background-color: var(--color-white);
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.footer-section {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    margin: 0;
+    padding: 1rem 0;
+    box-sizing: border-box;
+}
+
+.footer-contact {
+    text-align: left;
+}
+
+.footer-contact h3 {
+    font-family: 'League Gothic', sans-serif;
+    font-size: 22px;
+    margin: 0;
+}
+
+.footer-contact p {
+    font-family: 'Sura', serif;
+    font-size: 14px;
+    margin: 0.2rem 0; /* Reducir espacio entre párrafos */
+}
+.footer-contact div {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
+.footerLogo {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 120px;
+    height: auto;
+    margin-left: 1rem;
+}
+
+.footer-links {
+    text-align: left;
+    margin-left: 25%;
+}
+
+.footer-links-column {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    text-align: left;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.footer-links a {
+    font-family: 'League Gothic', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--color-secondary);
+    transition: color 0.3s ease;
+    display: block;
+    margin: 0.3rem 0; /* Espacio más compacto */
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
+}
+
+.social-links {
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+.social-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: var(--color-secondary);
+    transition: color 0.3s ease;
+    margin: 0 0.4rem;
+    vertical-align: middle; /* Centra verticalmente los iconos */
+}
+
+.social-icon img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+.social-icon .x:hover{
+    content: url('../IMG/icons8-twitterx.svg');
+    
+}
+.social-icon .instagram:hover{
+    content: url('../IMG/icons8-instagram.svg');
+    
+}
+.social-icon .youtube:hover{
+    content: url('../IMG/icons8-youtube.svg');
+    
+}
+.social-icon .linkedin:hover{
+    content: url('../IMG/icons8-linkedin\ \(1\).svg');
+    
+}
+
+/* Efectos y transiciones */
+.hover-effect {
+    transition: transform 0.3s ease;
+}
+.hover-effect:hover {
+    transform: translateY(-2px);
+}
+.box-shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.gradient-bg {
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+}
+
+.overflow-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+    .main-image,
+    .main-text {
+        width: 100%;
+    }
+    
+    .main-text {
+        padding: 50px 20px;
+    }
+    
+    .footer-section {
+        flex: 1 1 100%;
+        margin: 1rem 0;
+    }
+    
+    .header-nav {
+        gap: 1rem;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+    }
+    
+    .footer-links-column {
+        padding: 1rem 0;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
